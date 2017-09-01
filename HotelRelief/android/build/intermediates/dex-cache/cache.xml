@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3231f1b3f17b1488855ee4c26315acada6304058.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_c05391b0c52e7fc10705ef3437cc8b6e9cbe0a6b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_54ac9b3c176b1c02df1179729e1c53703c9f6388.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_82b830322f2d0de401c7808e8a736fc927d22e9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_d514e30b1e21f9eed36a16f7a152dced20ea33e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_f9263f49f1619fe4702dbbd803c6bbab4bd32725.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.0.4_8904449776163bfba4d950e9a593234866da0967.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ed87ccdcb70c17d71ba4e6e4ac16afa62d3c49fb">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.0.4_7010152d49ddb6e48aee9c2e2f8c7ba870ca827b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_f3acf0ecd23ebbd395ff6f6b6f8f6ed49cdb2925.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.0.4_2034107478a5224bb35df3f37f5863e377900d4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_0333044641b40430621739e0ab16f8d8086a7b3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_3e0f0fb1c72695672413e3b625370de00cb50c3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.0.4_b3a2b861b73b4ef158823f7f1d7e5d00591a4595.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.1/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_8d67f0d8a82f6bc50bb7b3752af255afe4d4a211.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_70a7ccc020bec20d25d959115229f9363ae55969.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_16a80ff50f61b95e3a4f6471993dd8c63a0adc3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_88242cc681b6eceae79c79031255b34115708b5c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_005a3d43ecadab3b1bd24a2eef89dfe19b2f36bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c5526d30278eb171f4a1325bd6b927c9057c91f4">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.46.1_e56b6f8a413e0f727a8a64f1545ca06da00901b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_86923d3853469d65929faf9037db71c1c5f4c1f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_2252f29903eb245f7bdd0ca0be5db5c87ac83681.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_337e366f27ff6aa23bce83adb02b2b209c5cc66e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_830b241b97a909588f79b226668c80675a08363b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/HotelRelief/react-native-firebase/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="98fd0ebcbc44a79c54ab517a6809b2787a8f8c63">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/HotelRelief-react-native-firebase-unspecified_6bdb5740a3f73ee7832bad2f0c49acd8a278c1f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_eb755c3ec777694cae1fe15d14d470e4caba515e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_1e3eb330b2fa6a4cf6a883b50db3aabb1226fd71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_f997ba5ba3258b6be78c36948d08ae0d3cb7547d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e5b429c146094a612134910688d169ec08deeefb">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.0.4_17588689fbc584cbaea66d306833a35451812a6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.0.4_dc571ca936170d3f0100682d538311800148d4c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.0.4_626040f831f69a06398a2bcaeb8c43e04728c7ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/.m2/repository/com/squareup/okhttp3/okhttp/3.6.0/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_8aec4474ac18588676155b6303c63fe00c3d0ff7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_72729840621fa16a581001bcd16e70053b3d521d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/juhani/RN/hotel-relief/HotelRelief/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_880e5d98cac8422491ba8b8fb410925d31d8e484.jar" />
+    </item>
+
+</items>

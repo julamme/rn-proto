@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "805055899266",
+    "firebase_url": "https://hotel-relief.firebaseio.com",
+    "project_id": "hotel-relief",
+    "storage_bucket": "hotel-relief.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805055899266:android:c12455e20239c6bc",
+        "android_client_info": {
+          "package_name": "com.hotelrelief"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805055899266-dhlvldokr37dvpelel0p2tk1f6rucgmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWGnuUIX9a4wsXmTMuU0We4baljqYI9fg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -112,11 +112,16 @@ android {
         }
     }
     buildTypes {
+        debug{
+            resValue "string", "com.google.android.geo.API_KEY", mapsKey
+        }
+
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    println "maps key ${mapsKey}"
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -133,6 +138,8 @@ android {
 }
 
 dependencies {
+
+    compile project(':react-native-maps')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules

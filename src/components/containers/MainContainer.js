@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+import MapContainer from './MapContainer';
 
-export default class MainContainer extends React.Component {
+export default class MainContainer extends Component {
   render() {
     console.log(this.props);
     return (
-      <View
+      <View>
+        <MapContainer />
+      </View>
+      /*<View
         style={{
           paddingTop: 20,
           flex: 1,
@@ -30,7 +34,7 @@ export default class MainContainer extends React.Component {
             });
           }}
         />
-      </View>
+      </View>*/
     );
   }
 }

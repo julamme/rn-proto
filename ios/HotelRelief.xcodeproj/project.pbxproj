@@ -35,10 +35,18 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* HotelReliefTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HotelReliefTests.m */; };
+		30DABF20D56B232195809E20 /* libPods-HotelRelief-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */; };
+		41770AF0AA544F0DAF1F6CD3 /* libRNSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */; };
 		4C265468937747CE8638F3A4 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED35B458F54BE5BF6BB61C /* libReactNativePermissions.a */; };
+		4F1E714BF96BB512C3C185F9 /* libPods-HotelRelief.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */; };
+		53E1EA28CA58999D83809607 /* libPods-HotelReliefTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */; };
 		560AA98D1F7A697B0023DC67 /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = 560AA98C1F7A697B0023DC67 /* node_modules */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		74B9F59DAB8B4ED497F3B8D0 /* libRNSDKShareKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0429B1D14C484B1486E6D126 /* libRNSDKShareKit.a */; };
+		764A281C7A63BD89EC24C6D1 /* libPods-HotelRelief-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		A2344AAECCD24B25966CDEF6 /* libRNSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */; };
+		A64EE3D5543745B5893D0F1D /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F770E6707DB4E7DBA451AED /* lib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +253,34 @@
 			remoteGlobalIDString = 9D23B34F1C767B80008B4819;
 			remoteInfo = ReactNativePermissions;
 		};
+		560AAA261F7ACD0A0023DC67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DD70E291ECB10AC00000000;
+			remoteInfo = RNSDK;
+		};
+		560AAA281F7ACD0A0023DC67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DD70E29AC0CD5F100000000;
+			remoteInfo = RNSDKCoreKit;
+		};
+		560AAA2A1F7ACD0A0023DC67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DD70E29031DBF3900000000;
+			remoteInfo = RNSDKLoginKit;
+		};
+		560AAA2C1F7ACD0A0023DC67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1DD70E2900B6388300000000;
+			remoteInfo = RNSDKShareKit;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -285,6 +321,8 @@
 		00E356EE1AD99517003FC87E /* HotelReliefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelReliefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HotelReliefTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotelReliefTests.m; sourceTree = "<group>"; };
+		0429B1D14C484B1486E6D126 /* libRNSDKShareKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSDKShareKit.a; sourceTree = "<group>"; };
+		0CC29970830B6890C3F3D029 /* Pods-HotelReliefTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelReliefTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests.release.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HotelRelief.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelRelief.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,16 +333,31 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HotelRelief/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HotelRelief/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelReliefTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB2B9187FF84D599FFEBDBA /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HotelRelief-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HotelRelief-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HotelRelief-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HotelRelief-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E5D83E2FCE0B08C5A118DF /* Pods-HotelRelief-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		36E76E817268B2C40A9AA070 /* Pods-HotelRelief.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief.debug.xcconfig"; sourceTree = "<group>"; };
+		397457D4CCCAE879D5571F72 /* Pods-HotelRelief-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		560AA98C1F7A697B0023DC67 /* node_modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = node_modules; path = ../node_modules; sourceTree = "<group>"; };
+		5681EA281DF72AAA638FF7D3 /* Pods-HotelReliefTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelReliefTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56ED35B458F54BE5BF6BB61C /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativePermissions.a; sourceTree = "<group>"; };
+		5AD490890A624F7695137F1B /* ios.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ios.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/ios.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8F770E6707DB4E7DBA451AED /* lib.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = lib.a; sourceTree = "<group>"; };
 		9320F4E2728943FAAB949BC7 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
+		942227CA41292430243E3BC5 /* Pods-HotelRelief-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSDKLoginKit.a; sourceTree = "<group>"; };
 		B0D92EB5933D49F58E224571 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
+		C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA72640A186B91D894D49074 /* Pods-HotelRelief-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSDKCoreKit.a; sourceTree = "<group>"; };
+		E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAF4DA37A8A3E65DA169FB8 /* Pods-HotelRelief.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				53E1EA28CA58999D83809607 /* libPods-HotelReliefTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +388,11 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				209C162B111A4EB6B7E3E3D0 /* libAirMaps.a in Frameworks */,
 				4C265468937747CE8638F3A4 /* libReactNativePermissions.a in Frameworks */,
+				4F1E714BF96BB512C3C185F9 /* libPods-HotelRelief.a in Frameworks */,
+				A64EE3D5543745B5893D0F1D /* lib.a in Frameworks */,
+				41770AF0AA544F0DAF1F6CD3 /* libRNSDKCoreKit.a in Frameworks */,
+				A2344AAECCD24B25966CDEF6 /* libRNSDKLoginKit.a in Frameworks */,
+				74B9F59DAB8B4ED497F3B8D0 /* libRNSDKShareKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +408,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				764A281C7A63BD89EC24C6D1 /* libPods-HotelRelief-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +416,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DABF20D56B232195809E20 /* libPods-HotelRelief-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +482,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		084E0C5098E0EE5AFD56B057 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36E76E817268B2C40A9AA070 /* Pods-HotelRelief.debug.xcconfig */,
+				FAAF4DA37A8A3E65DA169FB8 /* Pods-HotelRelief.release.xcconfig */,
+				32E5D83E2FCE0B08C5A118DF /* Pods-HotelRelief-tvOS.debug.xcconfig */,
+				CA72640A186B91D894D49074 /* Pods-HotelRelief-tvOS.release.xcconfig */,
+				397457D4CCCAE879D5571F72 /* Pods-HotelRelief-tvOSTests.debug.xcconfig */,
+				942227CA41292430243E3BC5 /* Pods-HotelRelief-tvOSTests.release.xcconfig */,
+				5681EA281DF72AAA638FF7D3 /* Pods-HotelReliefTests.debug.xcconfig */,
+				0CC29970830B6890C3F3D029 /* Pods-HotelReliefTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +553,10 @@
 			children = (
 				9320F4E2728943FAAB949BC7 /* libAirMaps.a */,
 				56ED35B458F54BE5BF6BB61C /* libReactNativePermissions.a */,
+				8F770E6707DB4E7DBA451AED /* lib.a */,
+				D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */,
+				AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */,
+				0429B1D14C484B1486E6D126 /* libRNSDKShareKit.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -493,6 +573,17 @@
 			isa = PBXGroup;
 			children = (
 				560AA9C71F7A70A00023DC67 /* libReactNativePermissions.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		560AAA201F7ACD0A0023DC67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				560AAA271F7ACD0A0023DC67 /* lib.a */,
+				560AAA291F7ACD0A0023DC67 /* libRNSDKCoreKit.a */,
+				560AAA2B1F7ACD0A0023DC67 /* libRNSDKLoginKit.a */,
+				560AAA2D1F7ACD0A0023DC67 /* libRNSDKShareKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,6 +623,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				2AB2B9187FF84D599FFEBDBA /* AirMaps.xcodeproj */,
 				B0D92EB5933D49F58E224571 /* ReactNativePermissions.xcodeproj */,
+				5AD490890A624F7695137F1B /* ios.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -553,6 +645,8 @@
 				00E356EF1AD99517003FC87E /* HotelReliefTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				560AA9711F7A69170023DC67 /* Recovered References */,
+				084E0C5098E0EE5AFD56B057 /* Pods */,
+				CA0B333458C592A984D403DC /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -570,6 +664,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CA0B333458C592A984D403DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */,
+				C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */,
+				19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */,
+				2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,9 +682,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HotelReliefTests" */;
 			buildPhases = (
+				5FE6ABD57F5A7DA49CF47910 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				843E6EF89500EE5025AFBD41 /* [CP] Embed Pods Frameworks */,
+				E2B6A617E350D994F0DD4462 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -595,10 +703,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HotelRelief" */;
 			buildPhases = (
+				5C04456513A27295C6E0D248 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				C0B07A6222B21F4D2793EED4 /* [CP] Embed Pods Frameworks */,
+				383FC32A6177BF5A0F48DB1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,10 +724,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "HotelRelief-tvOS" */;
 			buildPhases = (
+				0ED7AA174BEC96435814532E /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				08675A2BE87047B07D18276E /* [CP] Embed Pods Frameworks */,
+				092F37A1A489B1C11329C041 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,9 +745,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "HotelRelief-tvOSTests" */;
 			buildPhases = (
+				D09C343917A67FB5BA4DF8C7 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
+				38F62E96171CC2CA1FBA0388 /* [CP] Embed Pods Frameworks */,
+				4672C9C73368898E782E7DD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -684,6 +801,10 @@
 				{
 					ProductGroup = 560AA9871F7A69180023DC67 /* Products */;
 					ProjectRef = 2AB2B9187FF84D599FFEBDBA /* AirMaps.xcodeproj */;
+				},
+				{
+					ProductGroup = 560AAA201F7ACD0A0023DC67 /* Products */;
+					ProjectRef = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -934,6 +1055,37 @@
 			remoteRef = 560AA9C61F7A70A00023DC67 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		560AAA271F7ACD0A0023DC67 /* lib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = lib.a;
+			remoteRef = 560AAA261F7ACD0A0023DC67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		560AAA291F7ACD0A0023DC67 /* libRNSDKCoreKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libRNSDKCoreKit.a;
+			path = lib.a;
+			remoteRef = 560AAA281F7ACD0A0023DC67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		560AAA2B1F7ACD0A0023DC67 /* libRNSDKLoginKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libRNSDKLoginKit.a;
+			path = lib.a;
+			remoteRef = 560AAA2A1F7ACD0A0023DC67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		560AAA2D1F7ACD0A0023DC67 /* libRNSDKShareKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libRNSDKShareKit.a;
+			path = lib.a;
+			remoteRef = 560AAA2C1F7ACD0A0023DC67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1014,6 +1166,54 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		08675A2BE87047B07D18276E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		092F37A1A489B1C11329C041 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0ED7AA174BEC96435814532E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelRelief-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1027,6 +1227,150 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		383FC32A6177BF5A0F48DB1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38F62E96171CC2CA1FBA0388 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4672C9C73368898E782E7DD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C04456513A27295C6E0D248 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelRelief-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FE6ABD57F5A7DA49CF47910 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelReliefTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		843E6EF89500EE5025AFBD41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B07A6222B21F4D2793EED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09C343917A67FB5BA4DF8C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotelRelief-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B6A617E350D994F0DD4462 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1095,6 +1439,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5681EA281DF72AAA638FF7D3 /* Pods-HotelReliefTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1105,12 +1450,17 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = HotelReliefTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1125,6 +1475,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CC29970830B6890C3F3D029 /* Pods-HotelReliefTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1132,12 +1483,17 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = HotelReliefTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1152,6 +1508,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E76E817268B2C40A9AA070 /* Pods-HotelRelief.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1159,7 +1516,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = HotelRelief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1168,6 +1527,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.HotelRelief;
 				PRODUCT_NAME = HotelRelief;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1175,13 +1535,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAAF4DA37A8A3E65DA169FB8 /* Pods-HotelRelief.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = HotelRelief/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1190,6 +1553,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.HotelRelief;
 				PRODUCT_NAME = HotelRelief;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1197,6 +1561,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E5D83E2FCE0B08C5A118DF /* Pods-HotelRelief-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1211,11 +1576,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = "HotelRelief-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1233,6 +1603,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA72640A186B91D894D49074 /* Pods-HotelRelief-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1247,11 +1618,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/**",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = "HotelRelief-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1269,6 +1645,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 397457D4CCCAE879D5571F72 /* Pods-HotelRelief-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1284,6 +1661,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.HotelRelief-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1295,6 +1676,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942227CA41292430243E3BC5 /* Pods-HotelRelief-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1308,6 +1690,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

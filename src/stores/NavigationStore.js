@@ -3,8 +3,12 @@ import { StackNavigator } from 'react-navigation';
 import MainContainer from '../components/containers/MainContainer';
 import ProfileContainer from '../components/containers/ProfileContainer';
 import LocationContainer from '../components/containers/LocationContainer';
+import LoginContainer from '../components/containers/LoginContainer';
 
 export const AppNavigator = StackNavigator({
+  Login: {
+    screen: LoginContainer
+  },
   Main: {
     screen: MainContainer
   },
@@ -15,7 +19,7 @@ export const AppNavigator = StackNavigator({
     screen: LocationContainer
   },
   initialRouteName: {
-    screen: MainContainer
+    screen: LoginContainer
   }
 });
 export default class NavigationStore {
@@ -23,7 +27,7 @@ export default class NavigationStore {
   @observable.ref
   navigationState = {
     index: 0,
-    routes: [{ key: 'Main', routeName: 'Main', params: { title: 'Main' } }]
+    routes: [{ key: 'Login', routeName: 'Login', params: { title: 'Login' } }]
   };
 
   @action

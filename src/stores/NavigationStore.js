@@ -5,23 +5,28 @@ import ProfileContainer from '../components/containers/ProfileContainer';
 import LocationContainer from '../components/containers/LocationContainer';
 import LoginContainer from '../components/containers/LoginContainer';
 
-export const AppNavigator = StackNavigator({
-  Login: {
-    screen: LoginContainer
+export const AppNavigator = StackNavigator(
+  {
+    Login: {
+      screen: LoginContainer
+    },
+    Main: {
+      screen: MainContainer
+    },
+    Profile: {
+      screen: ProfileContainer
+    },
+    Location: {
+      screen: LocationContainer
+    }
   },
-  Main: {
-    screen: MainContainer
-  },
-  Profile: {
-    screen: ProfileContainer
-  },
-  Location: {
-    screen: LocationContainer
-  },
-  initialRouteName: {
-    screen: LoginContainer
+  {
+    initialRouteName: {
+      screen: LoginContainer
+    },
+    headerMode: 'none'
   }
-});
+);
 export default class NavigationStore {
   @observable headerTitle = 'Main';
   @observable.ref

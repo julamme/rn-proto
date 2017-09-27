@@ -1,7 +1,8 @@
 //@flow
 import { observable, action, computed } from 'mobx';
 import { AccessToken } from 'react-native-fbsdk';
-import firebase from './../firebase';
+import firebase, { firebaseRefs } from './../firebase';
+import Geofire from 'geofire';
 
 const auth = {
   provider: 'facebook'
@@ -24,7 +25,7 @@ export default class LoginStore {
       this.firebaseLoginWithAccessToken();
     } else {
       AccessToken.getCurrentAccessToken().then(data => {
-        if (data.accessToken) {
+        if (data) {
           this.accessToken = data.accessToken;
           this.firebaseLoginWithAccessToken();
         }
@@ -43,6 +44,10 @@ export default class LoginStore {
       .then(user => {
         if (user) {
           this.firebaseUser = user;
+          firebase
+            .database()
+            .ref(`${firebaseRefs.users}/${user.uid}`)
+            .update(user);
         }
       })
       .catch(error => console.error('Sign in error to firebase', error));

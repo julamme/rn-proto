@@ -5,7 +5,6 @@ import MapContainer from './MapContainer';
 
 export default class MainContainer extends Component {
   render() {
-    console.log(this.props);
     return (
       <View>
         <MapContainer />

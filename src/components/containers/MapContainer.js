@@ -1,8 +1,10 @@
 /** @flow */
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Platform } from 'react-native';
+import { Text, View, StyleSheet, Platform, Dimensions } from 'react-native';
 import Permissions from 'react-native-permissions';
 import MapView from 'react-native-maps';
+import Geofire from 'geofire';
+import firebase from './../../firebase';
 
 const styles =
   Platform.OS === 'ios'
@@ -22,8 +24,8 @@ const styles =
     : StyleSheet.create({
         container: {
           ...StyleSheet.absoluteFillObject,
-          height: 400,
-          width: 400,
+          height: Dimensions.get('window').height,
+          width: Dimensions.get('window').width,
           justifyContent: 'flex-end',
           alignItems: 'center'
         },
@@ -53,6 +55,9 @@ type State = {
 
 type Props = {};
 export default class MapContainer extends Component<Props, State> {
+  static navigationOptions = {
+    header: { visible: false }
+  };
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -91,6 +96,10 @@ export default class MapContainer extends Component<Props, State> {
     );
   };
   componentDidMount() {
+    const geofire = new Geofire(firebase.database().ref());
+    geofire
+      .set('test', [60.78846339038239, 24.41154379831676])
+      .then(() => console.log('ok'), error => console.error('error', error));
     Permissions.check('location', 'always').then(response => {
       if (response === locationResponses.authorized) {
         this.setState({

@@ -6,24 +6,29 @@ import { View } from 'react-native';
 import { observer, Provider } from 'mobx-react';
 import { addNavigationHelpers } from 'react-navigation';
 import NavigationStore, { AppNavigator } from './stores/NavigationStore';
+import LoginStore from './stores/LoginStore';
 
-type Props = {};
+type Props = {
+  navStore: NavigationStore,
+  loginStore: LoginStore
+};
 
 @observer
 class App extends Component {
   constructor(props: Props, context: any) {
     super(props);
-    this.store = new NavigationStore();
+    this.navStore = new NavigationStore();
+    this.loginStore = new LoginStore();
   }
-  store: NavigationStore;
+  navStore: NavigationStore;
+  loginStore: LoginStore;
   render() {
-    console.log('render');
     return (
-      <Provider>
+      <Provider navStore={this.navStore} loginStore={this.loginStore}>
         <AppNavigator
           navigation={addNavigationHelpers({
-            dispatch: this.store.dispatch,
-            state: this.store.navigationState
+            dispatch: this.navStore.dispatch,
+            state: this.navStore.navigationState
           })}
         />
       </Provider>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>914635399608-1vop1e2pdf55s97tntjo5v4b1u226u4r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.914635399608-1vop1e2pdf55s97tntjo5v4b1u226u4r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBxx7ZAMXIw4_BWvB8KXwvVls0-Dx8Ep-k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>914635399608</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.HotelRelief</string>
+	<key>PROJECT_ID</key>
+	<string>hotel-relief-181111</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hotel-relief-181111.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:914635399608:ios:8c4a2fdd50f8ba6d</string>
+	<key>DATABASE_URL</key>
+	<string>https://hotel-relief-181111.firebaseio.com</string>
+</dict>
+</plist>

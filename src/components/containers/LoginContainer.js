@@ -61,13 +61,10 @@ export default class LoginContainer extends Component<Props, State> {
             permissions={['public_profile']}
             onLogin={data => {
               loginStore.authWithFb(data);
-              console.log(data);
             }}
             onLogout={() => loginStore.logout()}
             onLoginFound={data => {
               loginStore.authWithFb(data);
-              console.log(`auth found`);
-              console.log(data);
             }}
             onError={error => console.error('FBERROR', error)}
           />

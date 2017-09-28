@@ -27,6 +27,7 @@ export default class LoginStore {
 
   @action
   authenticate: () => void = () => {
+    //UNUSED
     /*if (this.accessToken) {
       this.firebaseLoginWithAccessToken();
     } else {
@@ -41,6 +42,7 @@ export default class LoginStore {
 
   firebaseLoginWithAccessToken() {
     console.log(this.fbLogin);
+    console.log('login to firebase');
     const credential = firebase.auth.FacebookAuthProvider.credential(
       this.fbLogin.credentials.token
     );
@@ -50,6 +52,7 @@ export default class LoginStore {
       .then(user => {
         if (user) {
           this.firebaseUser = user;
+          console.log(user);
           firebase
             .database()
             .ref(`${firebaseRefs.users}/${user.uid}`)

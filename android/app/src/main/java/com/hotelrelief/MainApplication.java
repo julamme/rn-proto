@@ -5,6 +5,10 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.airbnb.android.react.maps.MapsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -49,8 +53,10 @@ public class MainApplication extends Application implements ReactApplication {
 
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new FBSDKPackage(mCallbackManager),
+            new FBSDKPackage(),
             new MapsPackage(),
+            new MapsPackage(),
+            new FBSDKPackage(mCallbackManager),
              new RNFirebasePackage(),  // <-- Add this line
           // Add these packages as appropriate
          // new RNFirebaseAdMobPackage(),

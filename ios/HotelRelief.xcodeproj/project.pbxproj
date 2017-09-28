@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,7 +20,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		182CDBC767216670B05898DF /* libPods-HotelRelief-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA90DF3F57966AFC6F79A0A /* libPods-HotelRelief-tvOS.a */; };
 		209C162B111A4EB6B7E3E3D0 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9320F4E2728943FAAB949BC7 /* libAirMaps.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -35,18 +34,36 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* HotelReliefTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HotelReliefTests.m */; };
-		30DABF20D56B232195809E20 /* libPods-HotelRelief-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */; };
-		41770AF0AA544F0DAF1F6CD3 /* libRNSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */; };
 		4C265468937747CE8638F3A4 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED35B458F54BE5BF6BB61C /* libReactNativePermissions.a */; };
-		4F1E714BF96BB512C3C185F9 /* libPods-HotelRelief.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */; };
-		53E1EA28CA58999D83809607 /* libPods-HotelReliefTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */; };
-		560AA98D1F7A697B0023DC67 /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = 560AA98C1F7A697B0023DC67 /* node_modules */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		74B9F59DAB8B4ED497F3B8D0 /* libRNSDKShareKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0429B1D14C484B1486E6D126 /* libRNSDKShareKit.a */; };
-		764A281C7A63BD89EC24C6D1 /* libPods-HotelRelief-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */; };
+		560AE0E91F7CCFCE002DB2F4 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		564EE99D1F7C2F83004C3B29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 564EE9781F7C2F83004C3B29 /* GoogleService-Info.plist */; };
+		566B1F9D1F7CD27600DF3AD5 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		569A6D231F7C3B41008FB91B /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 560AA98B1F7A69180023DC67 /* libAirMaps.a */; };
+		569A6D2C1F7C3B85008FB91B /* libcxxreact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */; };
+		569A6D2D1F7C3B85008FB91B /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
+		569A6D2E1F7C3B85008FB91B /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		569A6D2F1F7C3B85008FB91B /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		569A6D301F7C3B85008FB91B /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
+		569A6D311F7C3B85008FB91B /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
+		569A6D321F7C3B85008FB91B /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
+		569A6D331F7C3B85008FB91B /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
+		569A6D341F7C3B85008FB91B /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		569A6D351F7C3B85008FB91B /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
+		569A6D361F7C3B85008FB91B /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
+		569A6D371F7C3B85008FB91B /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		569A6D381F7C3B8F008FB91B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D1F1F7C3AE3008FB91B /* Bolts.framework */; };
+		569A6D391F7C3B8F008FB91B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D221F7C3AE5008FB91B /* FBSDKCoreKit.framework */; };
+		569A6D3A1F7C3B8F008FB91B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D211F7C3AE4008FB91B /* FBSDKLoginKit.framework */; };
+		569A6D3B1F7C3B8F008FB91B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D201F7C3AE4008FB91B /* FBSDKShareKit.framework */; };
+		569A6D3C1F7C3BB3008FB91B /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5616470E1F7C2B69003C84E9 /* libRCTFBSDK.a */; };
+		569A6D3D1F7C3BE8008FB91B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D1F1F7C3AE3008FB91B /* Bolts.framework */; };
+		569A6D3E1F7C3BE8008FB91B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D221F7C3AE5008FB91B /* FBSDKCoreKit.framework */; };
+		569A6D3F1F7C3BE8008FB91B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D211F7C3AE4008FB91B /* FBSDKLoginKit.framework */; };
+		569A6D401F7C3BE8008FB91B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569A6D201F7C3AE4008FB91B /* FBSDKShareKit.framework */; };
+		5F1C031D421A17DE24E09037 /* libPods-HotelRelief.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177EB9E741DB7D584908A960 /* libPods-HotelRelief.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		A2344AAECCD24B25966CDEF6 /* libRNSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */; };
-		A64EE3D5543745B5893D0F1D /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F770E6707DB4E7DBA451AED /* lib.a */; };
+		BF1F77922EAD5B9940254824 /* libPods-HotelReliefTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B41C8782E334E88AD8838F2F /* libPods-HotelReliefTests.a */; };
+		F41C40E0FA9F1151CD98D246 /* libPods-HotelRelief-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF39F20CD6FE78203A1B3EF2 /* libPods-HotelRelief-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +298,27 @@
 			remoteGlobalIDString = 1DD70E2900B6388300000000;
 			remoteInfo = RNSDKShareKit;
 		};
+		5616470D1F7C2B69003C84E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 561647091F7C2B69003C84E9 /* RCTFBSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
+			remoteInfo = RCTFBSDK;
+		};
+		566B1FCF1F7CD34F00DF3AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 566B1FCA1F7CD34F00DF3AD5 /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = ART;
+		};
+		566B1FD11F7CD34F00DF3AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 566B1FCA1F7CD34F00DF3AD5 /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 323A12871E5F266B004975B8;
+			remoteInfo = "ART-tvOS";
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -333,30 +371,36 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HotelRelief/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HotelRelief/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelReliefTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		177EB9E741DB7D584908A960 /* libPods-HotelRelief.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB2B9187FF84D599FFEBDBA /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HotelRelief-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HotelRelief-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HotelRelief-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HotelRelief-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E5D83E2FCE0B08C5A118DF /* Pods-HotelRelief-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		36E76E817268B2C40A9AA070 /* Pods-HotelRelief.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief.debug.xcconfig"; sourceTree = "<group>"; };
 		397457D4CCCAE879D5571F72 /* Pods-HotelRelief-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		560AA98C1F7A697B0023DC67 /* node_modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = node_modules; path = ../node_modules; sourceTree = "<group>"; };
+		561647091F7C2B69003C84E9 /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RCTFBSDK.xcodeproj; sourceTree = "<group>"; };
+		564EE9781F7C2F83004C3B29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		566B1FCA1F7CD34F00DF3AD5 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		5681EA281DF72AAA638FF7D3 /* Pods-HotelReliefTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelReliefTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests.debug.xcconfig"; sourceTree = "<group>"; };
+		569A6D1F1F7C3AE3008FB91B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		569A6D201F7C3AE4008FB91B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		569A6D211F7C3AE4008FB91B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		569A6D221F7C3AE5008FB91B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		56ED35B458F54BE5BF6BB61C /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativePermissions.a; sourceTree = "<group>"; };
 		5AD490890A624F7695137F1B /* ios.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ios.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/ios.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6FA90DF3F57966AFC6F79A0A /* libPods-HotelRelief-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8F770E6707DB4E7DBA451AED /* lib.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = lib.a; sourceTree = "<group>"; };
 		9320F4E2728943FAAB949BC7 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		942227CA41292430243E3BC5 /* Pods-HotelRelief-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOSTests/Pods-HotelRelief-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSDKLoginKit.a; sourceTree = "<group>"; };
+		AF39F20CD6FE78203A1B3EF2 /* libPods-HotelRelief-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D92EB5933D49F58E224571 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
-		C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41C8782E334E88AD8838F2F /* libPods-HotelReliefTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelReliefTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA72640A186B91D894D49074 /* Pods-HotelRelief-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief-tvOS/Pods-HotelRelief-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSDKCoreKit.a; sourceTree = "<group>"; };
-		E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HotelRelief.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAF4DA37A8A3E65DA169FB8 /* Pods-HotelRelief.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelRelief.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -366,7 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				53E1EA28CA58999D83809607 /* libPods-HotelReliefTests.a in Frameworks */,
+				BF1F77922EAD5B9940254824 /* libPods-HotelReliefTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +418,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				566B1F9D1F7CD27600DF3AD5 /* libRCTAnimation.a in Frameworks */,
+				560AE0E91F7CCFCE002DB2F4 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				569A6D3D1F7C3BE8008FB91B /* Bolts.framework in Frameworks */,
+				569A6D3E1F7C3BE8008FB91B /* FBSDKCoreKit.framework in Frameworks */,
+				569A6D3F1F7C3BE8008FB91B /* FBSDKLoginKit.framework in Frameworks */,
+				569A6D401F7C3BE8008FB91B /* FBSDKShareKit.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
@@ -388,11 +435,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				209C162B111A4EB6B7E3E3D0 /* libAirMaps.a in Frameworks */,
 				4C265468937747CE8638F3A4 /* libReactNativePermissions.a in Frameworks */,
-				4F1E714BF96BB512C3C185F9 /* libPods-HotelRelief.a in Frameworks */,
-				A64EE3D5543745B5893D0F1D /* lib.a in Frameworks */,
-				41770AF0AA544F0DAF1F6CD3 /* libRNSDKCoreKit.a in Frameworks */,
-				A2344AAECCD24B25966CDEF6 /* libRNSDKLoginKit.a in Frameworks */,
-				74B9F59DAB8B4ED497F3B8D0 /* libRNSDKShareKit.a in Frameworks */,
+				5F1C031D421A17DE24E09037 /* libPods-HotelRelief.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +451,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				764A281C7A63BD89EC24C6D1 /* libPods-HotelRelief-tvOS.a in Frameworks */,
+				182CDBC767216670B05898DF /* libPods-HotelRelief-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +459,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30DABF20D56B232195809E20 /* libPods-HotelRelief-tvOSTests.a in Frameworks */,
+				569A6D3C1F7C3BB3008FB91B /* libRCTFBSDK.a in Frameworks */,
+				569A6D2C1F7C3B85008FB91B /* libcxxreact.a in Frameworks */,
+				569A6D2D1F7C3B85008FB91B /* libRCTActionSheet.a in Frameworks */,
+				569A6D2E1F7C3B85008FB91B /* libRCTAnimation.a in Frameworks */,
+				569A6D2F1F7C3B85008FB91B /* libRCTGeolocation.a in Frameworks */,
+				569A6D301F7C3B85008FB91B /* libRCTImage.a in Frameworks */,
+				569A6D381F7C3B8F008FB91B /* Bolts.framework in Frameworks */,
+				569A6D391F7C3B8F008FB91B /* FBSDKCoreKit.framework in Frameworks */,
+				569A6D3A1F7C3B8F008FB91B /* FBSDKLoginKit.framework in Frameworks */,
+				569A6D3B1F7C3B8F008FB91B /* FBSDKShareKit.framework in Frameworks */,
+				569A6D311F7C3B85008FB91B /* libRCTLinking.a in Frameworks */,
+				569A6D321F7C3B85008FB91B /* libRCTNetwork.a in Frameworks */,
+				569A6D331F7C3B85008FB91B /* libRCTSettings.a in Frameworks */,
+				569A6D341F7C3B85008FB91B /* libRCTText.a in Frameworks */,
+				569A6D351F7C3B85008FB91B /* libRCTVibration.a in Frameworks */,
+				569A6D361F7C3B85008FB91B /* libRCTWebSocket.a in Frameworks */,
+				569A6D371F7C3B85008FB91B /* libReact.a in Frameworks */,
+				569A6D231F7C3B41008FB91B /* libAirMaps.a in Frameworks */,
+				F41C40E0FA9F1151CD98D246 /* libPods-HotelRelief-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +579,7 @@
 		13B07FAE1A68108700A75B9A /* HotelRelief */ = {
 			isa = PBXGroup;
 			children = (
+				564EE9781F7C2F83004C3B29 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -557,6 +619,7 @@
 				D609D1A48BF245BBB687E12B /* libRNSDKCoreKit.a */,
 				AF06288FCB2847D88FDDB06D /* libRNSDKLoginKit.a */,
 				0429B1D14C484B1486E6D126 /* libRNSDKShareKit.a */,
+				63994D5E8B714C8E95DB7364 /* libRNFirebase.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -580,10 +643,27 @@
 		560AAA201F7ACD0A0023DC67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				560AAA271F7ACD0A0023DC67 /* lib.a */,
+				560AAA271F7ACD0A0023DC67 /* libRNSDK.a */,
 				560AAA291F7ACD0A0023DC67 /* libRNSDKCoreKit.a */,
 				560AAA2B1F7ACD0A0023DC67 /* libRNSDKLoginKit.a */,
 				560AAA2D1F7ACD0A0023DC67 /* libRNSDKShareKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5616470A1F7C2B69003C84E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5616470E1F7C2B69003C84E9 /* libRCTFBSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		566B1FCB1F7CD34F00DF3AD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				566B1FD01F7CD34F00DF3AD5 /* libART.a */,
+				566B1FD21F7CD34F00DF3AD5 /* libART-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -609,7 +689,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				560AA98C1F7A697B0023DC67 /* node_modules */,
+				566B1FCA1F7CD34F00DF3AD5 /* ART.xcodeproj */,
+				561647091F7C2B69003C84E9 /* RCTFBSDK.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -667,10 +748,14 @@
 		CA0B333458C592A984D403DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E550C5707969C3E9BCF137C3 /* libPods-HotelRelief.a */,
-				C7B475FE203C6D37D6E5C682 /* libPods-HotelRelief-tvOS.a */,
-				19D03219B68161DDC9D7A953 /* libPods-HotelRelief-tvOSTests.a */,
-				2417EDAF66BB76BE3844AE37 /* libPods-HotelReliefTests.a */,
+				569A6D1F1F7C3AE3008FB91B /* Bolts.framework */,
+				569A6D221F7C3AE5008FB91B /* FBSDKCoreKit.framework */,
+				569A6D211F7C3AE4008FB91B /* FBSDKLoginKit.framework */,
+				569A6D201F7C3AE4008FB91B /* FBSDKShareKit.framework */,
+				177EB9E741DB7D584908A960 /* libPods-HotelRelief.a */,
+				6FA90DF3F57966AFC6F79A0A /* libPods-HotelRelief-tvOS.a */,
+				AF39F20CD6FE78203A1B3EF2 /* libPods-HotelRelief-tvOSTests.a */,
+				B41C8782E334E88AD8838F2F /* libPods-HotelReliefTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -708,8 +793,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C0B07A6222B21F4D2793EED4 /* [CP] Embed Pods Frameworks */,
-				383FC32A6177BF5A0F48DB1D /* [CP] Copy Pods Resources */,
+				86F35498E4CF69BD4E912443 /* [CP] Embed Pods Frameworks */,
+				180F33398E5F05E3D4288480 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -803,6 +888,10 @@
 					ProjectRef = 2AB2B9187FF84D599FFEBDBA /* AirMaps.xcodeproj */;
 				},
 				{
+					ProductGroup = 566B1FCB1F7CD34F00DF3AD5 /* Products */;
+					ProjectRef = 566B1FCA1F7CD34F00DF3AD5 /* ART.xcodeproj */;
+				},
+				{
 					ProductGroup = 560AAA201F7ACD0A0023DC67 /* Products */;
 					ProjectRef = 5AD490890A624F7695137F1B /* ios.xcodeproj */;
 				},
@@ -813,6 +902,10 @@
 				{
 					ProductGroup = 5E91572E1DD0AC6500FF2AA8 /* Products */;
 					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+				},
+				{
+					ProductGroup = 5616470A1F7C2B69003C84E9 /* Products */;
+					ProjectRef = 561647091F7C2B69003C84E9 /* RCTFBSDK.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -1055,9 +1148,10 @@
 			remoteRef = 560AA9C61F7A70A00023DC67 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		560AAA271F7ACD0A0023DC67 /* lib.a */ = {
+		560AAA271F7ACD0A0023DC67 /* libRNSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
+			name = libRNSDK.a;
 			path = lib.a;
 			remoteRef = 560AAA261F7ACD0A0023DC67 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1084,6 +1178,27 @@
 			name = libRNSDKShareKit.a;
 			path = lib.a;
 			remoteRef = 560AAA2C1F7ACD0A0023DC67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5616470E1F7C2B69003C84E9 /* libRCTFBSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTFBSDK.a;
+			remoteRef = 5616470D1F7C2B69003C84E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		566B1FD01F7CD34F00DF3AD5 /* libART.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libART.a;
+			remoteRef = 566B1FCF1F7CD34F00DF3AD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		566B1FD21F7CD34F00DF3AD5 /* libART-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libART-tvOS.a";
+			remoteRef = 566B1FD11F7CD34F00DF3AD5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
@@ -1129,8 +1244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				560AA98D1F7A697B0023DC67 /* node_modules in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				564EE99D1F7C2F83004C3B29 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1214,21 +1329,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		383FC32A6177BF5A0F48DB1D /* [CP] Copy Pods Resources */ = {
+		180F33398E5F05E3D4288480 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1242,6 +1343,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelRelief/Pods-HotelRelief-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
 		38F62E96171CC2CA1FBA0388 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1324,7 +1439,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelReliefTests/Pods-HotelReliefTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C0B07A6222B21F4D2793EED4 /* [CP] Embed Pods Frameworks */ = {
+		86F35498E4CF69BD4E912443 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1457,14 +1572,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
@@ -1490,14 +1600,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
@@ -1513,6 +1618,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
@@ -1539,6 +1652,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
@@ -1582,16 +1703,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.HotelRelief-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1624,16 +1740,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.HotelRelief-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1654,17 +1765,15 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "HotelRelief-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.HotelRelief-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1685,17 +1794,15 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "HotelRelief-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.HotelRelief-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -259,6 +259,7 @@ export default class MapContainer extends Component<Props, State> {
     }
     return <View />;
   }
+  //
   addMarkers() {
     return R.uniq(this.props.rootStore.placeStore.shownPlaces).map(item => {
       console.log('singleitem');

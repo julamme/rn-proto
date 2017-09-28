@@ -3,9 +3,10 @@ GoogleService-Info.plist
 # OSX
 #
 .DS_Store
-ios/GoogleService-info.plist
+ios/GoogleService-Info.plist
 android/app/gradle.properties
 android/app/my.properties
+android/app/google-services.json
 # Xcode
 #
 build/

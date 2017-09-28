@@ -1,7 +1,7 @@
 # OSX
 #
 .DS_Store
-
+ios/GoogleService-info.plist
 android/app/gradle.properties
 android/app/my.properties
 # Xcode

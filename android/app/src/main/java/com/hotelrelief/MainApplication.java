@@ -3,12 +3,10 @@ package com.hotelrelief;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.airbnb.android.react.maps.MapsPackage;
+
 import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
-import com.airbnb.android.react.maps.MapsPackage;
+
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -16,8 +14,8 @@ import com.facebook.soloader.SoLoader;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.appevents.AppEventsLogger;
+import com.magus.fblogin.FacebookLoginPackage;
 
 import io.invertase.firebase.RNFirebasePackage; // <-- Add this line
 // Optional packages - add as appropriate
@@ -36,53 +34,51 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
-  private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
+   // private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
 
-  protected static CallbackManager getCallbackManager() {
-    return mCallbackManager;
-  }
+  //  protected static CallbackManager getCallbackManager() {
+   //     return mCallbackManager;
+  //  }
 
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+        @Override
+        public boolean getUseDeveloperSupport() {
+            return BuildConfig.DEBUG;
+        }
+
+        @Override
+        protected List<ReactPackage> getPackages() {
+
+            return Arrays.<ReactPackage>asList(
+                    new MainReactPackage(),
+                    new MapsPackage(),
+                    new FacebookLoginPackage(),
+                    new RNFirebasePackage(),  // <-- Add this line
+                    // Add these packages as appropriate
+                    // new RNFirebaseAdMobPackage(),
+                    // new RNFirebaseAnalyticsPackage(),
+                    new RNFirebaseAuthPackage(),
+                    //  new RNFirebaseRemoteConfigPackage(),
+                    //  new RNFirebaseCrashPackage(),
+                    new RNFirebaseDatabasePackage(),
+                    //  new RNFirebaseMessagingPackage(),
+                    //   new RNFirebasePerformancePackage(),
+                    new RNFirebaseStoragePackage()
+            );
+        }
+    };
+
     @Override
-    public boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
+    public ReactNativeHost getReactNativeHost() {
+        return mReactNativeHost;
     }
 
     @Override
-    protected List<ReactPackage> getPackages() {
-
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new FBSDKPackage(),
-            new MapsPackage(),
-            new MapsPackage(),
-            new FBSDKPackage(mCallbackManager),
-             new RNFirebasePackage(),  // <-- Add this line
-          // Add these packages as appropriate
-         // new RNFirebaseAdMobPackage(),
-         // new RNFirebaseAnalyticsPackage(),
-          new RNFirebaseAuthPackage(),
-        //  new RNFirebaseRemoteConfigPackage(),
-        //  new RNFirebaseCrashPackage(),
-          new RNFirebaseDatabasePackage(),
-        //  new RNFirebaseMessagingPackage(),
-       //   new RNFirebasePerformancePackage(),
-          new RNFirebaseStoragePackage()
-      );
+    public void onCreate() {
+        super.onCreate();
+        SoLoader.init(this, /* native exopackage */ false);
+        //FacebookSdk.sdkInitialize(getApplicationContext());
+        // If you want to use AppEventsLogger to log events.
+       // AppEventsLogger.activateApp(this);
     }
-  };
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
-  }
-
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
-    FacebookSdk.sdkInitialize(getApplicationContext());
-    // If you want to use AppEventsLogger to log events.
-    AppEventsLogger.activateApp(this);
-  }
 }

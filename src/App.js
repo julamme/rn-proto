@@ -2,33 +2,33 @@
  * @flow
  */
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Platform } from 'react-native';
 import { observer, Provider } from 'mobx-react';
 import { addNavigationHelpers } from 'react-navigation';
-import NavigationStore, { AppNavigator } from './stores/NavigationStore';
-import LoginStore from './stores/LoginStore';
+import { AppNavigator } from './stores/NavigationStore';
+import RootStore from './stores/RootStore';
 
 type Props = {
-  navStore: NavigationStore,
-  loginStore: LoginStore
+  rootStore: RootStore
 };
 
 @observer
 class App extends Component {
   constructor(props: Props, context: any) {
     super(props);
-    this.navStore = new NavigationStore();
-    this.loginStore = new LoginStore();
+    this.rootStore = new RootStore();
   }
   navStore: NavigationStore;
   loginStore: LoginStore;
+  placeStore: PlaceStore;
+
   render() {
     return (
-      <Provider navStore={this.navStore} loginStore={this.loginStore}>
+      <Provider rootStore={this.rootStore}>
         <AppNavigator
           navigation={addNavigationHelpers({
-            dispatch: this.navStore.dispatch,
-            state: this.navStore.navigationState
+            dispatch: this.rootStore.navStore.dispatch,
+            state: this.rootStore.navStore.navigationState
           })}
         />
       </Provider>

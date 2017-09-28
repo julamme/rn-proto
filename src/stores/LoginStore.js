@@ -8,6 +8,9 @@ const auth = {
 };
 
 export default class LoginStore {
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore;
+  }
   @observable fbLogin = null;
   @observable firebaseUser = null;
 

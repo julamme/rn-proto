@@ -20,7 +20,7 @@ type State = {
   currentToken: ?AccessToken
 };
 
-@inject('loginStore')
+@inject('rootStore')
 @observer
 export default class LoginContainer extends Component<Props, State> {
   constructor(props: Props) {
@@ -28,21 +28,23 @@ export default class LoginContainer extends Component<Props, State> {
   }
 
   componentDidMount() {
-    if (this.props.loginStore.firebaseUser === null) {
+    if (this.props.rootStore.loginStore.firebaseUser === null) {
       console.log('firebaseuser was null');
       //this.props.loginStore.authenticate();
     }
   }
   componentDidUpdate() {
-    if (this.props.loginStore.firebaseUser) {
+    if (this.props.rootStore.loginStore.firebaseUser) {
       this.props.navigation.navigate('Main');
     }
   }
 
   shouldComponentUpdate(nextProps: Props, nextState: State) {
     const hasChanges = [
-      nextProps.loginStore.accessToken !== this.props.loginStore.accessToken,
-      nextProps.loginStore.firebaseUser !== this.props.loginStore.firebaseUser
+      nextProps.rootStore.loginStore.accessToken !==
+        this.props.rootStore.loginStore.accessToken,
+      nextProps.rootStore.loginStore.firebaseUser !==
+        this.props.rootStore.loginStore.firebaseUser
     ];
 
     console.log(hasChanges);
@@ -50,7 +52,7 @@ export default class LoginContainer extends Component<Props, State> {
     return hasChanges.map(item => item);
   }
   render() {
-    const { loginStore } = this.props;
+    const { loginStore } = this.props.rootStore;
     if (loginStore.firebaseUser) {
       return <View />;
     } else {

@@ -1,9 +1,20 @@
 /** @flow */
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Platform, Dimensions } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Platform,
+  Dimensions,
+  TouchableOpacity,
+  PermissionsAndroid
+} from 'react-native';
 import Permissions from 'react-native-permissions';
 import MapView from 'react-native-maps';
+import { NavigationActions } from 'react-navigation';
 import Geofire from 'geofire';
+import { inject, observer } from 'mobx-react';
+import colors from './../../constants/colors';
 import firebase from './../../firebase';
 
 const styles =
@@ -30,7 +41,8 @@ const styles =
           alignItems: 'center'
         },
         map: {
-          ...StyleSheet.absoluteFillObject
+          ...StyleSheet.absoluteFillObject,
+          zIndex: 1
         }
       });
 const locationResponses = {
@@ -50,10 +62,19 @@ const mapSettings = {
 type State = {
   locationPermission: ?string,
   currentLocation: ?Coordinates,
-  region: ?Object
+  region: ?Object,
+  markers: Array<Object>,
+  currentNewMarker: any,
+  showAddNewLocation: boolean
 };
 
-type Props = {};
+type Props = {
+  navigation: any,
+  rootStore: RootStore
+};
+
+@inject('rootStore')
+@observer
 export default class MapContainer extends Component<Props, State> {
   static navigationOptions = {
     header: { visible: false }
@@ -63,9 +84,12 @@ export default class MapContainer extends Component<Props, State> {
     this.state = {
       locationPermission: 'undetermined',
       currentLocation: null,
-      region: null
+      region: null,
+      markers: [],
+      showAddNewLocation: false
     };
   }
+  state: State;
 
   requestPermission() {
     return Permissions.request('location');
@@ -88,7 +112,10 @@ export default class MapContainer extends Component<Props, State> {
             longitudeDelta: mapSettings.lonDelta
           }
         });
-        console.log(this.state);
+        this.props.rootStore.placeStore.refreshPlacesToShow([
+          response.coords.latitude,
+          response.coords.longitude
+        ]);
       },
       error => {
         console.error(error);
@@ -96,10 +123,52 @@ export default class MapContainer extends Component<Props, State> {
     );
   };
   componentDidMount() {
-    const geofire = new Geofire(firebase.database().ref());
-    geofire
-      .set('test', [60.78846339038239, 24.41154379831676])
-      .then(() => console.log('ok'), error => console.error('error', error));
+    this.checkPermissions();
+  }
+
+  checkPermissions: () => void = () => {
+    Platform.OS === 'android'
+      ? this.checkPermissionsAndroid()
+      : this.checkPermissionsIOS();
+  };
+
+  checkPermissionsAndroid() {
+    PermissionsAndroid.check(
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+    ).then(status => {
+      console.log(`android ${status}`);
+      if (status) {
+        this.setState({
+          locationPermission: locationResponses.authorized
+        });
+        this.startLocationUpdates();
+      } else {
+        this.requestAndroidPermission();
+      }
+    });
+  }
+
+  async requestAndroidPermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: 'Hotel Relief location permission',
+          message:
+            'Hotel Relief needs to use your location for displaying places.'
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        this.startLocationUpdates();
+      } else {
+        console.warn('Camera permission denied');
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+
+  checkPermissionsIOS: () => void = () => {
     Permissions.check('location', 'always').then(response => {
       if (response === locationResponses.authorized) {
         this.setState({
@@ -128,10 +197,83 @@ export default class MapContainer extends Component<Props, State> {
         });
       }
     });
-  }
+  };
 
+  onLongPress: (event: any) => void = event => {
+    this.setState({
+      currentNewMarker: {
+        latlng: event.nativeEvent.coordinate
+      },
+      showAddNewLocation: true
+    });
+  };
+
+  conditionalAddLocationButton() {
+    if (!this.state.showAddNewLocation) {
+      return <View />;
+    }
+    return (
+      <TouchableOpacity
+        style={{
+          position: 'absolute',
+          bottom: 50,
+          padding: 10,
+          borderRadius: 2,
+          backgroundColor: colors.pureWhite,
+          zIndex: 2
+        }}
+        onPress={() => {
+          console.log(this.props);
+          this.props.rootStore.placeStore.setCurrentPlaceLocation(
+            this.state.currentNewMarker.latlng
+          );
+          this.props.rootStore.navStore.dispatch(
+            NavigationActions.navigate({ routeName: 'NewPlace' }),
+            false
+          );
+          /*this.props.navigation.navigate('NewLocation');
+          this.props.placeStore.setCurrentPlaceLocation(
+            this.state.currentNewMarker.latlng
+          );*/
+        }}
+      >
+        <Text style={{ fontSize: 14, color: colors.darkGray }}>
+          Add new location
+        </Text>
+      </TouchableOpacity>
+    );
+  }
+  addNewMarker() {
+    if (this.state.currentNewMarker) {
+      console.log('new marker');
+      console.log(this.state.currentNewMarker.latlng);
+      return (
+        <MapView.Marker
+          title={'test'}
+          coordinate={this.state.currentNewMarker.latlng}
+        />
+      );
+    }
+    return <View />;
+  }
+  addMarkers() {
+    return this.props.rootStore.placeStore.shownPlaces.map(item => {
+      console.log('singleitem');
+      console.log(item);
+      console.log({ longitude: item.longitude, latitude: item.latitude });
+
+      return (
+        <MapView.Marker
+          key={item.id}
+          identifier={item.id}
+          title={item.name}
+          coordinate={{ longitude: item.longitude, latitude: item.latitude }}
+        />
+      );
+    });
+  }
   render() {
-    console.log(this.state);
+    console.log(this.props.rootStore.placeStore);
     return (
       <View style={styles.container}>
         <MapView
@@ -141,8 +283,13 @@ export default class MapContainer extends Component<Props, State> {
           mapType={mapSettings.mapType}
           showsUserLocation={mapSettings.showUserLocation}
           region={this.state.region}
+          onLongPress={this.onLongPress}
           onRegionChange={this.onRegionChanged}
-        />
+        >
+          {this.addNewMarker()}
+          {this.addMarkers()}
+        </MapView>
+        {this.conditionalAddLocationButton()}
       </View>
     );
   }

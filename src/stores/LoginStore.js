@@ -1,6 +1,5 @@
 //@flow
 import { observable, action, computed } from 'mobx';
-import { AccessToken } from 'react-native-fbsdk';
 import firebase, { firebaseRefs } from './../firebase';
 import Geofire from 'geofire';
 
@@ -9,19 +8,26 @@ const auth = {
 };
 
 export default class LoginStore {
-  @observable accessToken = null;
+  @observable fbLogin = null;
   @observable firebaseUser = null;
 
   @action
-  loginWithAccessToken: (fbResponse: ?Object) => void = fbResponse => {
-    console.log(fbResponse);
-    this.accessToken = fbResponse;
-    this.firebaseLoginWithAccessToken();
+  logout: () => void = () => {
+    this.fbLogin = null;
+    this.firebaseUser = null;
+  };
+
+  @action
+  authWithFb: (response: any) => void = response => {
+    this.fbLogin = response;
+    if (this.firebaseUser === null) {
+      this.firebaseLoginWithAccessToken();
+    }
   };
 
   @action
   authenticate: () => void = () => {
-    if (this.accessToken) {
+    /*if (this.accessToken) {
       this.firebaseLoginWithAccessToken();
     } else {
       AccessToken.getCurrentAccessToken().then(data => {
@@ -30,13 +36,13 @@ export default class LoginStore {
           this.firebaseLoginWithAccessToken();
         }
       });
-    }
+    }*/
   };
 
   firebaseLoginWithAccessToken() {
-    console.log(this.accessToken);
+    console.log(this.fbLogin);
     const credential = firebase.auth.FacebookAuthProvider.credential(
-      this.accessToken
+      this.fbLogin.credentials.token
     );
     firebase
       .auth()

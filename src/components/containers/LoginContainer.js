@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { inject, observer } from 'mobx-react';
 import firebase from 'react-native-firebase';
-import { LoginButton, AccessToken } from 'react-native-fbsdk';
+import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,7 +30,7 @@ export default class LoginContainer extends Component<Props, State> {
   componentDidMount() {
     if (this.props.loginStore.firebaseUser === null) {
       console.log('firebaseuser was null');
-      this.props.loginStore.authenticate();
+      //this.props.loginStore.authenticate();
     }
   }
   componentDidUpdate() {
@@ -57,19 +57,19 @@ export default class LoginContainer extends Component<Props, State> {
       return (
         <View style={styles.container}>
           <Text style={{ padding: 4, fontSize: 28 }}> Hotel relief</Text>
-          <LoginButton
-            readPermissions={['public_profile']}
-            onLoginFinished={(error, result) => {
-              if (error) {
-                alert('login has error: ' + result.error);
-              } else if (result.isCancelled) {
-                alert('login is cancelled.');
-              } else {
-                AccessToken.getCurrentAccessToken().then(data => {
-                  loginStore.loginWithAccessToken(data.accessToken);
-                });
-              }
+          <FBLogin
+            permissions={['public_profile']}
+            onLogin={data => {
+              loginStore.authWithFb(data);
+              console.log(data);
             }}
+            onLogout={() => loginStore.logout()}
+            onLoginFound={data => {
+              loginStore.authWithFb(data);
+              console.log(`auth found`);
+              console.log(data);
+            }}
+            onError={error => console.error('FBERROR', error)}
           />
         </View>
       );

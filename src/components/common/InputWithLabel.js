@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import { Text, View, TextInput, StyleSheet } from 'react-native';
 
+type Props = {
+  initialValue: string
+};
 export default class InputWithLabel extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ export default class InputWithLabel extends Component {
       value
     });
     if (this.props.onChangeText) {
-      this.props.onChangeText(this.state.value);
+      this.props.onChangeText(value);
     }
   };
   render() {

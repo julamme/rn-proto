@@ -2,8 +2,8 @@ import { observable, action } from 'mobx';
 import { StackNavigator } from 'react-navigation';
 import MainContainer from '../components/containers/MainContainer';
 import ProfileContainer from '../components/containers/ProfileContainer';
-import LocationContainer from '../components/containers/LocationContainer';
 import LoginContainer from '../components/containers/LoginContainer';
+import PlaceContainer from '../components/containers/PlaceContainer';
 import NewPlaceContainer from '../components/containers/NewPlaceContainer';
 
 export const AppNavigator = StackNavigator(
@@ -20,8 +20,8 @@ export const AppNavigator = StackNavigator(
     Profile: {
       screen: ProfileContainer
     },
-    Location: {
-      screen: LocationContainer
+    PlaceDetails: {
+      screen: PlaceContainer
     }
   },
   {

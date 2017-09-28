@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   PermissionsAndroid
 } from 'react-native';
+import R from 'ramda';
 import Permissions from 'react-native-permissions';
 import MapView from 'react-native-maps';
 import { NavigationActions } from 'react-navigation';
@@ -65,7 +66,8 @@ type State = {
   region: ?Object,
   markers: Array<Object>,
   currentNewMarker: any,
-  showAddNewLocation: boolean
+  showAddNewLocation: boolean,
+  currentSelection: ?string
 };
 
 type Props = {
@@ -86,7 +88,8 @@ export default class MapContainer extends Component<Props, State> {
       currentLocation: null,
       region: null,
       markers: [],
-      showAddNewLocation: false
+      showAddNewLocation: false,
+      currentSelection: null
     };
   }
   state: State;
@@ -257,7 +260,7 @@ export default class MapContainer extends Component<Props, State> {
     return <View />;
   }
   addMarkers() {
-    return this.props.rootStore.placeStore.shownPlaces.map(item => {
+    return R.uniq(this.props.rootStore.placeStore.shownPlaces).map(item => {
       console.log('singleitem');
       console.log(item);
       console.log({ longitude: item.longitude, latitude: item.latitude });
@@ -267,10 +270,48 @@ export default class MapContainer extends Component<Props, State> {
           key={item.id}
           identifier={item.id}
           title={item.name}
+          onPress={event =>
+            this.setState({
+              currentSelection: event.nativeEvent.id
+            })}
           coordinate={{ longitude: item.longitude, latitude: item.latitude }}
         />
       );
     });
+  }
+  conditionalShowDetailsButton() {
+    if (this.state.currentSelection) {
+      return (
+        <TouchableOpacity
+          style={{
+            position: 'absolute',
+            bottom: 50,
+            padding: 10,
+            borderRadius: 2,
+            backgroundColor: colors.pureWhite,
+            zIndex: 2
+          }}
+          onPress={() => {
+            console.log(this.props);
+            this.props.rootStore.placeStore.loadDetailsFor(
+              this.state.currentSelection
+            );
+            this.props.rootStore.navStore.dispatch(
+              NavigationActions.navigate({ routeName: 'PlaceDetails' }),
+              false
+            );
+            /*this.props.navigation.navigate('NewLocation');
+          this.props.placeStore.setCurrentPlaceLocation(
+            this.state.currentNewMarker.latlng
+          );*/
+          }}
+        >
+          <Text style={{ fontSize: 14, color: colors.darkGray }}>
+            View Details
+          </Text>
+        </TouchableOpacity>
+      );
+    }
   }
   render() {
     console.log(this.props.rootStore.placeStore);
@@ -290,6 +331,7 @@ export default class MapContainer extends Component<Props, State> {
           {this.addMarkers()}
         </MapView>
         {this.conditionalAddLocationButton()}
+        {this.conditionalShowDetailsButton()}
       </View>
     );
   }

@@ -60,6 +60,13 @@ export default class LoginContainer extends Component<Props, State> {
         <View style={styles.container}>
           <Text style={{ padding: 4, fontSize: 28 }}> Hotel relief</Text>
           <FBLogin
+            styles={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0
+            }}
             permissions={['public_profile']}
             onLogin={data => {
               loginStore.authWithFb(data);

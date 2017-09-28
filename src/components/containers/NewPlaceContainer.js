@@ -8,6 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { inject } from 'mobx-react';
+import { NavigationActions } from 'react-navigation';
 import Place from './../../models/Place';
 import InputWithLabel from './../common/InputWithLabel';
 import colors from './../../constants/colors';
@@ -28,10 +29,10 @@ export default class NewPlaceContainer extends Component {
   }
 
   save: () => void = () => {
-    console.log('save');
-    console.log(this.props);
     this.props.rootStore.placeStore.mergeAndSavePlace(this.state.place);
-    console.log(this.props.rootStore.placeStore.currentPlace);
+    this.props.rootStore.navStore.dispatch(
+      NavigationActions.navigate({ routeName: 'Main' })
+    );
   };
 
   render() {

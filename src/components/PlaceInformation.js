@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
   },
   content: {
     textAlign: 'right',
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
+    fontSize: 16
   }
 });

@@ -65,37 +65,7 @@ export default class PlaceContainer extends Component<Props, State> {
         <FlatList
           data={this.props.rootStore.placeStore.currentPlace.reviews}
           keyExtractor={(item, index) => index}
-          renderItem={({ item }) => (
-            <View
-              style={{
-                flex: 1,
-                width: '70%',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: 2,
-                borderColor: colors.lightGray,
-                borderWidth: 1,
-                borderRadius: 4
-              }}
-            >
-              <Image
-                style={{
-                  width: 48,
-                  height: 48
-                }}
-                source={{ uri: item.user.profilePicture }}
-              />
-              <View>
-                <TextWithLabel label={'Name'} content={item.user.displayName} />
-                <TextWithLabel label={'Rating'} content={item.rating} />
-                <TextWithLabel
-                  label={'Description'}
-                  content={item.description}
-                />
-              </View>
-            </View>
-          )}
+          renderItem={({ item }) => <ReviewRow review={item} />}
         />
       );
     }

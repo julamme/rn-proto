@@ -17,6 +17,7 @@ import Geofire from 'geofire';
 import { inject, observer } from 'mobx-react';
 import colors from './../../constants/colors';
 import firebase from './../../firebase';
+import RootStore from './../../stores/RootStore';
 
 const styles =
   Platform.OS === 'ios'
@@ -74,7 +75,7 @@ type Props = {
   navigation: any,
   rootStore: RootStore
 };
-
+const newMarkerRef = null;
 @inject('rootStore')
 @observer
 export default class MapContainer extends Component<Props, State> {
@@ -94,16 +95,19 @@ export default class MapContainer extends Component<Props, State> {
   }
   state: State;
 
+  mapRef: any;
+
   requestPermission() {
     return Permissions.request('location');
   }
 
   onRegionChanged: (region: Object) => void = region => {
-    console.log(region);
+    this.setState({
+      region
+    });
   };
 
   startLocationUpdates: () => void = () => {
-    console.log('startlocationUpdates');
     navigator.geolocation.getCurrentPosition(
       response => {
         this.setState({
@@ -139,7 +143,6 @@ export default class MapContainer extends Component<Props, State> {
     PermissionsAndroid.check(
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
     ).then(status => {
-      console.log(`android ${status}`);
       if (status) {
         this.setState({
           locationPermission: locationResponses.authorized
@@ -177,11 +180,9 @@ export default class MapContainer extends Component<Props, State> {
         this.setState({
           locationPermission: response
         });
-        console.log('should start updates');
         this.startLocationUpdates();
       } else {
         this.requestPermission().then(_response => {
-          console.log(_response);
           this.setState({
             locationPermission:
               _response === locationResponses.allow ||
@@ -189,12 +190,10 @@ export default class MapContainer extends Component<Props, State> {
                 ? locationResponses.authorized
                 : locationResponses.denied
           });
-          console.log(this.state);
           if (
             _response === locationResponses.allow ||
             _response === locationResponses.authorized
           ) {
-            console.log('shoould start 2');
             this.startLocationUpdates();
           }
         });
@@ -219,21 +218,17 @@ export default class MapContainer extends Component<Props, State> {
       <TouchableOpacity
         style={{
           position: 'absolute',
-          bottom: 50,
+          bottom: Dimensions.get('window').height * 0.15,
           padding: 10,
           borderRadius: 2,
           backgroundColor: colors.pureWhite,
           zIndex: 2
         }}
         onPress={() => {
-          console.log(this.props);
           this.props.rootStore.placeStore.setCurrentPlaceLocation(
             this.state.currentNewMarker.latlng
           );
-          this.props.rootStore.navStore.dispatch(
-            NavigationActions.navigate({ routeName: 'NewPlace' }),
-            false
-          );
+          this.props.navigation.navigate('NewPlace');
         }}
       >
         <Text style={{ fontSize: 14, color: colors.darkGray }}>
@@ -244,8 +239,6 @@ export default class MapContainer extends Component<Props, State> {
   }
   addNewMarker() {
     if (this.state.currentNewMarker) {
-      console.log('new marker');
-      console.log(this.state.currentNewMarker.latlng);
       return (
         <MapView.Marker
           title={'test'}
@@ -263,40 +256,36 @@ export default class MapContainer extends Component<Props, State> {
           key={item.id}
           identifier={item.id}
           title={item.name}
-          onPress={event =>
+          onPress={event => {
+            this.mapRef.animateToCoordinate(event.nativeEvent.coordinate, 1);
             this.setState({
-              currentSelection: event.nativeEvent.id
-            })}
+              currentSelection: event.nativeEvent.id,
+              showAddNewLocation: false,
+              currentNewMarker: null
+            });
+          }}
           coordinate={{ longitude: item.longitude, latitude: item.latitude }}
         />
       );
     });
   }
   conditionalShowDetailsButton() {
-    if (this.state.currentSelection) {
+    if (this.state.currentSelection && !this.state.showAddNewLocation) {
       return (
         <TouchableOpacity
           style={{
             position: 'absolute',
-            bottom: Dimensions.get('window').height * 0.3,
+            bottom: Dimensions.get('window').height * 0.15,
             padding: 10,
             borderRadius: 2,
             backgroundColor: colors.pureWhite,
             zIndex: 2
           }}
           onPress={() => {
-            console.log(this.props);
             this.props.rootStore.placeStore.loadDetailsFor(
               this.state.currentSelection
             );
-            this.props.rootStore.navStore.dispatch(
-              NavigationActions.navigate({ routeName: 'PlaceDetails' }),
-              false
-            );
-            /*this.props.navigation.navigate('NewLocation');
-          this.props.placeStore.setCurrentPlaceLocation(
-            this.state.currentNewMarker.latlng
-          );*/
+            this.props.navigation.navigate('PlaceDetails');
           }}
         >
           <Text style={{ fontSize: 14, color: colors.darkGray }}>
@@ -310,6 +299,7 @@ export default class MapContainer extends Component<Props, State> {
     return (
       <View style={styles.container}>
         <MapView
+          ref={ref => (this.mapRef = ref)}
           style={styles.map}
           scrollEnabled={true}
           zoomEnabled={true}
@@ -317,6 +307,13 @@ export default class MapContainer extends Component<Props, State> {
           showsUserLocation={mapSettings.showUserLocation}
           region={this.state.region}
           onLongPress={this.onLongPress}
+          onPress={() => {
+            this.setState({
+              showAddNewLocation: false,
+              currentSelection: null,
+              currentNewMarker: null
+            });
+          }}
           onRegionChange={this.onRegionChanged}
         >
           {this.addNewMarker()}

@@ -4,9 +4,10 @@
 import React, { Component } from 'react';
 import { View, Platform } from 'react-native';
 import { observer, Provider } from 'mobx-react';
-import { addNavigationHelpers } from 'react-navigation';
-import { AppNavigator } from './stores/NavigationStore';
+import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import RootStore from './stores/RootStore';
+import LoginContainer from './components/containers/LoginContainer';
+import AppStack from './components/AppStack';
 
 type Props = {
   rootStore: RootStore
@@ -18,19 +19,17 @@ class App extends Component {
     super(props);
     this.rootStore = new RootStore();
   }
-  navStore: NavigationStore;
-  loginStore: LoginStore;
-  placeStore: PlaceStore;
+
+  rootStore: RootStore;
 
   render() {
     return (
       <Provider rootStore={this.rootStore}>
-        <AppNavigator
-          navigation={addNavigationHelpers({
-            dispatch: this.rootStore.navStore.dispatch,
-            state: this.rootStore.navStore.navigationState
-          })}
-        />
+        {this.rootStore.loginStore.firebaseUser ? (
+          <AppStack />
+        ) : (
+          <LoginContainer />
+        )}
       </Provider>
     );
   }

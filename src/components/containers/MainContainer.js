@@ -7,7 +7,7 @@ export default class MainContainer extends Component {
   render() {
     return (
       <View>
-        <MapContainer />
+        <MapContainer navigation={this.props.navigation} />
       </View>
       /*<View
         style={{

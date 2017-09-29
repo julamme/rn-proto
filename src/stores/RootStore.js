@@ -10,7 +10,6 @@ export type RootStoreType = {
 class RootStore {
   constructor() {
     this.loginStore = new LoginStore(this);
-    this.navStore = new NavigationStore(this);
     this.placeStore = new PlaceStore(this);
   }
 }

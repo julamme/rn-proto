@@ -27,27 +27,35 @@ export const AppNavigator = StackNavigator(
   {
     initialRouteName: {
       screen: LoginContainer
-    }
+    },
+    navigationOptions: ({ navigation: { state } }) => ({
+      title: state.params && state.params.title
+    })
   }
 );
 export default class NavigationStore {
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
+    this.navigationState = AppNavigator.router.getStateForAction(
+      AppNavigator.router.getActionForPathAndParams('Login')
+    );
+    console.log('initial nav state');
+    console.log(this.navigationState);
   }
   @observable headerTitle = 'Main';
-  @observable.ref
-  navigationState = {
-    index: 0,
-    routes: [{ key: 'Login', routeName: 'Login', params: { title: 'Login' } }]
-  };
+  @observable.ref navigationState = null;
 
   @action
   dispatch = (action, stackNavState = true) => {
     console.log('disp');
+    console.log(action);
+    console.log(stackNavState);
+    console.log(this.navigationState);
     const previousNavState = stackNavState ? this.navigationState : null;
-    return (this.navigationState = AppNavigator.router.getStateForAction(
+    const nextState = AppNavigator.router.getStateForAction(
       action,
-      previousNavState
-    ));
+      this.navigationState
+    );
+    return nextState || previousNavState;
   };
 }

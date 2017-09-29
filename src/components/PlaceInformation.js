@@ -1,6 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import Place from './../models/Place';
 import TextWithLabel from './common/TextWithLabel';
 import colors from './../constants/colors';
@@ -26,12 +26,11 @@ export default class PlaceInformation extends Component {
           this.props.style
         ]}
       >
-        <TextWithLabel
-          style={styles.textContainer}
-          contentStyle={styles.content}
-          label={'Name:'}
-          content={this.props.place.name}
-        />
+        <Text
+          style={{ fontSize: 20, alignSelf: 'center', textAlign: 'center' }}
+        >
+          {this.props.place.name}
+        </Text>
 
         <TextWithLabel
           style={styles.textContainer}
@@ -51,7 +50,11 @@ export default class PlaceInformation extends Component {
           style={styles.textContainer}
           contentStyle={styles.content}
           label={'Price:'}
-          content={this.props.place.price ? this.props.place.price : '0'}
+          content={
+            this.props.place.price || this.props.place.price > 0
+              ? this.props.place.price
+              : 'Free'
+          }
         />
         <TextWithLabel
           style={styles.textContainer}
@@ -67,14 +70,11 @@ export default class PlaceInformation extends Component {
 const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
-    width: '50%',
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'flex-start'
   },
   content: {
-    textAlign: 'right',
-    alignSelf: 'flex-end',
-    fontSize: 16
+    alignItems: 'flex-end'
   }
 });

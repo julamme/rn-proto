@@ -22,12 +22,22 @@ export default class PlaceStore {
     }
   }
 
+  @computed
+  get currentPlaces() {
+    if (!this.shownPlaces) {
+      return [];
+    }
+    const arr = this.shownPlaces.slice();
+    return arr;
+  }
+
+  @action
+  cancelReview: () => void = reviewBase => {
+    this.isCreatingReview = false;
+  };
+
   @action
   addReview: (reviewBase: object) => void = reviewBase => {
-    console.log('adding ');
-    console.log(reviewBase);
-    console.log('to');
-    console.log(this.currentPlace);
     const review = new Review();
     review.description = reviewBase.description;
     review.rating = reviewBase.rating;
@@ -53,7 +63,10 @@ export default class PlaceStore {
     firebase
       .database()
       .ref(`locations/${this.currentPlace.id}`)
-      .update(this.currentPlace).then;
+      .update(this.currentPlace)
+      .then(response => {
+        console.log(response);
+      });
     this.isCreatingReview = false;
   };
 
@@ -76,8 +89,6 @@ export default class PlaceStore {
 
   @action
   refreshPlacesToShow: (latlng: any) => void = latlng => {
-    console.log('refresh places');
-    console.log(latlng);
     const tempData = [];
     const geofire = new Geofire(firebase.database().ref('geofire'));
     const geoquery = geofire.query({
@@ -92,7 +103,7 @@ export default class PlaceStore {
           const value = snapshot.val();
           value.id = snapshot.key;
           if (!R.contains(value, this.shownPlaces)) {
-            this.shownPlaces.push(value);
+            this.shownPlaces.push({ id: value.id, value });
           }
         });
     });

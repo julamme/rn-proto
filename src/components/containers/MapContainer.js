@@ -76,6 +76,7 @@ type Props = {
   rootStore: RootStore
 };
 const newMarkerRef = null;
+
 @inject('rootStore')
 @observer
 export default class MapContainer extends Component<Props, State> {
@@ -250,7 +251,10 @@ export default class MapContainer extends Component<Props, State> {
   }
   //
   addMarkers() {
-    return R.uniq(this.props.rootStore.placeStore.shownPlaces).map(item => {
+    return R.uniqBy(
+      item => item.id,
+      this.props.rootStore.placeStore.currentPlaces
+    ).map(item => {
       return (
         <MapView.Marker
           key={item.id}
@@ -264,7 +268,10 @@ export default class MapContainer extends Component<Props, State> {
               currentNewMarker: null
             });
           }}
-          coordinate={{ longitude: item.longitude, latitude: item.latitude }}
+          coordinate={{
+            longitude: item.value.longitude,
+            latitude: item.value.latitude
+          }}
         />
       );
     });

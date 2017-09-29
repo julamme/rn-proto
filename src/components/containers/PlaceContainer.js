@@ -119,8 +119,7 @@ const styles = StyleSheet.create({
   detailsContainer: { flex: 3, flexDirection: 'column' },
   reviewsContainer: {
     flex: 5,
-    width: '100%',
-    flexDirection: 'column',
-    alignItems: 'center'
+    padding: 2,
+    flexDirection: 'column'
   }
 });

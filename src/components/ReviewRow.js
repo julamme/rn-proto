@@ -16,11 +16,6 @@ const ReviewRow = ({ review }) => {
       <View style={styles.row}>
         <TextWithLabel
           style={[styles.textContainer, styles.withBorder]}
-          label={'Name:'}
-          content={review.user.displayName}
-        />
-        <TextWithLabel
-          style={[styles.textContainer, styles.withBorder]}
           label={'Rating:'}
           content={review.rating}
         />
@@ -38,8 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     padding: 2,
     borderColor: colors.lightGray,
     borderWidth: 1,

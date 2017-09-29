@@ -27,8 +27,7 @@ export const AppNavigator = StackNavigator(
   {
     initialRouteName: {
       screen: LoginContainer
-    },
-    headerMode: 'none'
+    }
   }
 );
 export default class NavigationStore {

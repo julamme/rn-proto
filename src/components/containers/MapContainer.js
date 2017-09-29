@@ -234,10 +234,6 @@ export default class MapContainer extends Component<Props, State> {
             NavigationActions.navigate({ routeName: 'NewPlace' }),
             false
           );
-          /*this.props.navigation.navigate('NewLocation');
-          this.props.placeStore.setCurrentPlaceLocation(
-            this.state.currentNewMarker.latlng
-          );*/
         }}
       >
         <Text style={{ fontSize: 14, color: colors.darkGray }}>
@@ -262,10 +258,6 @@ export default class MapContainer extends Component<Props, State> {
   //
   addMarkers() {
     return R.uniq(this.props.rootStore.placeStore.shownPlaces).map(item => {
-      console.log('singleitem');
-      console.log(item);
-      console.log({ longitude: item.longitude, latitude: item.latitude });
-
       return (
         <MapView.Marker
           key={item.id}
@@ -286,7 +278,7 @@ export default class MapContainer extends Component<Props, State> {
         <TouchableOpacity
           style={{
             position: 'absolute',
-            bottom: 50,
+            bottom: Dimensions.get('window').height * 0.3,
             padding: 10,
             borderRadius: 2,
             backgroundColor: colors.pureWhite,
@@ -315,7 +307,6 @@ export default class MapContainer extends Component<Props, State> {
     }
   }
   render() {
-    console.log(this.props.rootStore.placeStore);
     return (
       <View style={styles.container}>
         <MapView

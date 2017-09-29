@@ -6,25 +6,35 @@ import {
   StyleSheet,
   TouchableOpacity,
   Dimensions,
-  FlatList
+  FlatList,
+  Image
 } from 'react-native';
 import { inject, observer } from 'mobx-react';
 import colors from './../../constants/colors';
 import PlaceInformation from './../PlaceInformation';
 import NewReviewModal from './../NewReviewModal';
+import TextWithLabel from './../../components/common/TextWithLabel';
+import ReviewRow from './../ReviewRow';
+import Review from './../../models/Review';
+import { RootStoreType } from './../../stores/RootStore';
 
 type State = {
   showReviewModal: boolean
 };
+type Props = {
+  rootStore: RootStore
+};
 @inject('rootStore')
 @observer
-export default class PlaceContainer extends Component {
+export default class PlaceContainer extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       showReviewModal: false
     };
   }
+
+  state: State;
   renderPlaceInformation() {
     if (this.props.rootStore.placeStore.currentPlace) {
       return (
@@ -51,15 +61,39 @@ export default class PlaceContainer extends Component {
   renderList() {
     if (this.props.rootStore.placeStore.currentPlace) {
       return (
+        //$FlowFixMe
         <FlatList
-          style={{ marginLeft: 8, marginRight: 8 }}
           data={this.props.rootStore.placeStore.currentPlace.reviews}
-          keyExtractor={(item, key) => key}
+          keyExtractor={(item, index) => index}
           renderItem={({ item }) => (
-            <View style={{ flex: 1, flexDirection: 'column' }}>
-              <Text>{item.user.displayName} </Text>
-              <Text>{item.rating} </Text>
-              <Text>{item.description}</Text>
+            <View
+              style={{
+                flex: 1,
+                width: '70%',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: 2,
+                borderColor: colors.lightGray,
+                borderWidth: 1,
+                borderRadius: 4
+              }}
+            >
+              <Image
+                style={{
+                  width: 48,
+                  height: 48
+                }}
+                source={{ uri: item.user.profilePicture }}
+              />
+              <View>
+                <TextWithLabel label={'Name'} content={item.user.displayName} />
+                <TextWithLabel label={'Rating'} content={item.rating} />
+                <TextWithLabel
+                  label={'Description'}
+                  content={item.description}
+                />
+              </View>
             </View>
           )}
         />
@@ -76,7 +110,7 @@ export default class PlaceContainer extends Component {
           <TouchableOpacity
             style={{
               position: 'absolute',
-              top: Dimensions.get('window').height * 0.3,
+              top: Dimensions.get('window').height * 0.25,
               backgroundColor: colors.dirtyWhite,
               padding: 7,
               borderRadius: 2,
@@ -90,10 +124,12 @@ export default class PlaceContainer extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.detailsContainer}>
-          <Text style={{ fontSize: 20, alignSelf: 'center' }}>Reviews</Text>
           {this.renderPlaceInformation()}
         </View>
-        <View style={styles.reviewsContainer}>{this.renderList()}</View>
+        <View style={styles.reviewsContainer}>
+          <Text style={{ fontSize: 20, alignSelf: 'center' }}>Reviews</Text>
+          {this.renderList()}
+        </View>
       </View>
     );
   }
@@ -111,5 +147,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.debugYellow
   },
   detailsContainer: { flex: 3, flexDirection: 'column' },
-  reviewsContainer: { flex: 5, flexDirection: 'column' }
+  reviewsContainer: {
+    flex: 5,
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
 });

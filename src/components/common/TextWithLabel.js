@@ -5,9 +5,9 @@ import colors from './../../constants/colors';
 
 const TextWithLabel = props => {
   return (
-    <View style={[styles.container, props.style]}>
-      <Text style={styles.label}>{props.label} </Text>
-      <Text style={styles.content}>{props.content}</Text>
+    <View style={props.style}>
+      <Text style={props.labelStyle}>{props.label} </Text>
+      <Text style={props.contentStyle}>{props.content}</Text>
     </View>
   );
 };

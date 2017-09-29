@@ -33,7 +33,8 @@ export default class PlaceStore {
     review.rating = reviewBase.rating;
     review.user = {
       uid: this.rootStore.loginStore.firebaseUser.uid,
-      displayName: this.rootStore.loginStore.firebaseUser.displayName
+      displayName: this.rootStore.loginStore.firebaseUser.displayName,
+      profilePicture: this.rootStore.loginStore.firebaseUser.photoURL
     };
     this.currentPlace.reviews
       ? this.currentPlace.reviews.push(review)
@@ -130,7 +131,8 @@ export default class PlaceStore {
     this.currentPlace = place;
     this.currentPlace.addedBy = {
       uid: this.rootStore.loginStore.firebaseUser.uid,
-      displayName: this.rootStore.loginStore.firebaseUser.displayName
+      displayName: this.rootStore.loginStore.firebaseUser.displayName,
+      profilePicture: this.rootStore.loginStore.firebaseUser.photoURL
     };
     this.currentPlace.rating = 0;
     this.currentPlace.price = 0;

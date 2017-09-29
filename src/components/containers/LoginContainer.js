@@ -23,6 +23,9 @@ type State = {
 @inject('rootStore')
 @observer
 export default class LoginContainer extends Component<Props, State> {
+  static navigationOptions = {
+    headerMode: 'none'
+  };
   constructor(props: Props) {
     super(props);
   }

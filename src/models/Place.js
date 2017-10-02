@@ -1,6 +1,7 @@
 class Place {
   id: string;
   addedBy: string;
+  addedAt: string;
   name: string;
   latitude: number;
   longitude: longitude;

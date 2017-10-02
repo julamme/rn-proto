@@ -27,7 +27,12 @@ export default class PlaceInformation extends Component {
         ]}
       >
         <Text
-          style={{ fontSize: 20, alignSelf: 'center', textAlign: 'center' }}
+          style={{
+            fontSize: 20,
+            alignSelf: 'center',
+            textAlign: 'center',
+            color: colors.pureBlack
+          }}
         >
           {this.props.place.name}
         </Text>

@@ -71,16 +71,34 @@ export default class PlaceContainer extends Component<Props, State> {
     }
     return <View />;
   }
+
+  renderImage() {
+    if (
+      this.props.rootStore.placeStore.currentPlace &&
+      this.props.rootStore.placeStore.currentPlace.imageUrl
+    ) {
+      return (
+        <Image
+          style={{ flex: 1 }}
+          source={{
+            uri: this.props.rootStore.placeStore.currentPlace.imageUrl
+          }}
+        />
+      );
+    }
+    return <View />;
+  }
   render() {
     return (
       <View style={styles.container}>
         {this.renderReviewModal()}
         <View style={styles.imageContainer}>
-          <Text>ImageBox</Text>
+          {this.renderImage()}
           <TouchableOpacity
             style={{
               position: 'absolute',
               top: Dimensions.get('window').height * 0.25,
+              alignSelf: 'center',
               backgroundColor: colors.dirtyWhite,
               padding: 7,
               borderRadius: 2,
@@ -90,14 +108,22 @@ export default class PlaceContainer extends Component<Props, State> {
             onPress={() =>
               this.props.rootStore.placeStore.setIsCreatingReview(true)}
           >
-            <Text>Add review</Text>
+            <Text style={{ color: colors.pureBlack }}>Add review</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.detailsContainer}>
           {this.renderPlaceInformation()}
         </View>
         <View style={styles.reviewsContainer}>
-          <Text style={{ fontSize: 20, alignSelf: 'center' }}>Reviews</Text>
+          <Text
+            style={{
+              fontSize: 20,
+              alignSelf: 'center',
+              color: colors.pureBlack
+            }}
+          >
+            Reviews
+          </Text>
           {this.renderList()}
         </View>
       </View>
@@ -112,8 +138,6 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: colors.debugYellow
   },
   detailsContainer: { flex: 3, flexDirection: 'column' },

@@ -16,6 +16,7 @@ import { NavigationActions } from 'react-navigation';
 import Geofire from 'geofire';
 import { inject, observer } from 'mobx-react';
 import colors from './../../constants/colors';
+import PermissionStatus from './../../constants/PermissionStatus';
 import firebase from './../../firebase';
 import RootStore from './../../stores/RootStore';
 
@@ -47,14 +48,7 @@ const styles =
           zIndex: 1
         }
       });
-const locationResponses = {
-  authorized: 'authorized',
-  denied: 'denied',
-  restricted: 'restricted',
-  undetermined: 'undetermined',
-  allow: 'allow',
-  notAllow: 'not allow'
-};
+const locationResponses = PermissionStatus;
 const mapSettings = {
   mapType: 'standard',
   showUserLocation: true,
@@ -272,7 +266,22 @@ export default class MapContainer extends Component<Props, State> {
             longitude: item.value.longitude,
             latitude: item.value.latitude
           }}
-        />
+        >
+          <MapView.Callout
+            onPress={() => {
+              this.props.rootStore.placeStore.loadDetailsFor(
+                this.state.currentSelection
+                  ? this.state.currentSelection
+                  : item.id
+              );
+              this.props.navigation.navigate('PlaceDetails');
+            }}
+          >
+            <View>
+              <Text style={{ color: colors.pureBlack }}>{item.value.name}</Text>
+            </View>
+          </MapView.Callout>
+        </MapView.Marker>
       );
     });
   }

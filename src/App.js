@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <Provider rootStore={this.rootStore}>
-        {this.rootStore.loginStore.firebaseUser ? (
+        {this.rootStore.loginStore.firebaseUser === 'debug' ? (
           <AppStack />
         ) : (
           <LoginContainer />

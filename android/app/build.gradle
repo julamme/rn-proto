@@ -96,7 +96,7 @@ android {
     defaultConfig {
         applicationId "com.hotelrelief"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         ndk {
@@ -139,6 +139,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-image-picker')
     compile project(':react-native-vector-icons')
     compile(project(':react-native-maps')) {
         exclude group: 'com.google.android.gms', module: 'play-services-base'

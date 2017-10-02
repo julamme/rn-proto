@@ -1,5 +1,6 @@
 const colors = {
   aquaBlack: '#172827',
+  pureBlack: '#000000',
   pureWhite: '#ffffff',
   darkGray: '#2b2b2b',
   aqua: '#a7e2e8',

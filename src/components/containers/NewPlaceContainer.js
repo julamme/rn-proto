@@ -5,35 +5,159 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform,
+  Image,
+  PermissionsAndroid,
+  Dimensions
 } from 'react-native';
 import { inject } from 'mobx-react';
+import Permissions from 'react-native-permissions';
+import * as ImagePicker from 'react-native-image-picker';
 import { NavigationActions } from 'react-navigation';
 import Place from './../../models/Place';
+import PermissionStatus from './../../constants/PermissionStatus';
 import InputWithLabel from './../common/InputWithLabel';
 import colors from './../../constants/colors';
 type State = {
-  place: Place
+  place: Place,
+  photoUri: string,
+  photoFileName: string
 };
 
 type Props = {
   rootStore: RootStore
 };
+
+const photoOptions = {
+  mediaType: 'photo',
+  noData: true,
+  quality: 0.9
+};
+
 @inject('rootStore')
-export default class NewPlaceContainer extends Component {
+export default class NewPlaceContainer extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      place: new Place()
+      place: new Place(),
+      photoUri: ''
     };
   }
 
   save: () => void = () => {
-    this.props.rootStore.placeStore.mergeAndSavePlace(this.state.place);
-    this.props.rootStore.navStore.dispatch(
-      NavigationActions.navigate({ routeName: 'Main' })
+    this.props.rootStore.placeStore.mergeAndSavePlace(
+      this.state.place,
+      this.state.photoUri,
+      this.state.photoFileName
     );
+    this.props.navigation.goBack();
   };
+
+  addPhoto: () => void = () => {
+    if (Platform.OS === 'ios') {
+      this.checkPermissionsIOS().then(response => {
+        if (response === PermissionStatus.authorized) {
+          this.showImagePicker();
+        } else {
+          this.requestIOSPermissions().then(response => {
+            if (response === PermissionStatus.authorized) {
+              this.showImagePicker();
+            }
+          });
+        }
+      });
+    } else {
+      this.checkAndroidPermissions().then(granted => {
+        if (granted) {
+          this.showImagePicker();
+        }
+      });
+    }
+  };
+
+  checkPermissionsIOS: () => Promise<*> = () => {
+    return Permissions.check('photo').then();
+  };
+
+  checkAndroidPermissions: () => Promise<*> = () => {
+    return PermissionsAndroid.check(
+      PermissionsAndroid.PERMISSIONS.CAMERA
+    ).then(granted => {
+      if (granted) {
+        return granted;
+      } else {
+        return this.requestAndroidPermission();
+      }
+    });
+  };
+
+  async requestAndroidPermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.CAMERA,
+        {
+          title: 'Hotel Relief Camera Permission',
+          message:
+            'Hotel Relief needs access to your camera ' +
+            'so you can take pictures.'
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+
+  requestIOSPermissions: () => Promise<*> = () => {
+    return Permissions.request('photo');
+  };
+
+  showImagePicker: () => void = () => {
+    ImagePicker.showImagePicker(photoOptions, response => {
+      if (response.error) {
+        console.error('error taking photo', response.error);
+      }
+      if (response.didCancel) {
+        console.log('user canceled');
+      }
+      this.setState({
+        photoUri: response.uri,
+        photoFileName: response.fileName
+      });
+    });
+  };
+
+  shouldRenderImage() {
+    if (this.state.photoUri && this.state.photoUri.length > 1) {
+      return (
+        <View style={styles.imageRow}>
+          <View
+            style={{
+              flex: 9
+            }}
+          >
+            <Image
+              style={{
+                flex: 1,
+                paddingLeft: 6,
+                paddingRight: 6,
+                width: Dimensions.get('window').width
+              }}
+              source={{ uri: this.state.photoUri }}
+            />
+          </View>
+
+          <View style={{ flex: 1 }} />
+        </View>
+      );
+    }
+    return <View />;
+  }
 
   render() {
     return (
@@ -41,15 +165,15 @@ export default class NewPlaceContainer extends Component {
         style={{
           flex: 1,
           flexDirection: 'column',
-          justifyContent: 'space-around'
+          backgroundColor: colors.pureWhite
         }}
       >
-        <View style={styles.rowContainer}>
+        <View style={{ flex: 1, flexDirection: 'row' }} />
+        <View style={[styles.rowContainer]}>
           <InputWithLabel
             style={{ flex: 9 }}
-            label={'name'}
+            label={'Name'}
             onChangeText={text => {
-              console.log(text);
               this.state.place.name = text;
             }}
           />
@@ -58,14 +182,26 @@ export default class NewPlaceContainer extends Component {
         <View style={styles.rowContainer}>
           <InputWithLabel
             style={{ flex: 9 }}
-            label={'description'}
+            label={'Price'}
             onChangeText={text => {
-              console.log(text);
+              this.state.place.price = text;
+            }}
+          />
+          <View style={{ flex: 1 }} />
+        </View>
+        <View style={styles.rowContainer}>
+          <InputWithLabel
+            style={{ flex: 9 }}
+            label={'Description'}
+            onChangeText={text => {
               this.state.place.description = text;
             }}
           />
           <View style={{ flex: 1 }} />
         </View>
+
+        {this.shouldRenderImage()}
+
         <View
           style={[
             styles.rowContainer,
@@ -74,13 +210,25 @@ export default class NewPlaceContainer extends Component {
         >
           <TouchableOpacity
             style={{
+              margin: 5,
+              padding: 5,
+              borderRadius: 4,
+              backgroundColor: colors.aqua
+            }}
+            onPress={this.addPhoto}
+          >
+            <Text style={{ colors: colors.pureBlack }}>Add photo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              margin: 5,
               padding: 5,
               borderRadius: 4,
               backgroundColor: colors.aqua
             }}
             onPress={this.save}
           >
-            <Text>Send</Text>
+            <Text style={{ colors: colors.pureBlack }}>Send</Text>
           </TouchableOpacity>
         </View>
 
@@ -90,5 +238,17 @@ export default class NewPlaceContainer extends Component {
   }
 }
 const styles = StyleSheet.create({
-  rowContainer: { flex: 1, flexDirection: 'row' }
+  rowContainer: {
+    flex: 2,
+    flexDirection: 'row',
+    marginTop: 5,
+    marginBottom: 5
+  },
+  imageRow: {
+    flex: 7,
+    marginTop: 5,
+    marginBottom: 5,
+    width: Dimensions.get('window').width,
+    flexDirection: 'row'
+  }
 });

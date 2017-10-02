@@ -37,7 +37,7 @@ export default class PlaceStore {
   };
 
   @action
-  addReview: (reviewBase: object) => void = reviewBase => {
+  addReview: (reviewBase: Object) => void = reviewBase => {
     const review = new Review();
     review.description = reviewBase.description;
     review.rating = reviewBase.rating;
@@ -46,6 +46,7 @@ export default class PlaceStore {
       displayName: this.rootStore.loginStore.firebaseUser.displayName,
       profilePicture: this.rootStore.loginStore.firebaseUser.photoURL
     };
+    review.createdAt = Date.now();
     this.currentPlace.reviews
       ? this.currentPlace.reviews.push(review)
       : (this.currentPlace.reviews = Array.of(review));
@@ -76,15 +77,16 @@ export default class PlaceStore {
   };
   @action
   loadDetailsFor: (id: string) => void = id => {
-    firebase
-      .database()
-      .ref(`locations/${id}`)
-      .on('value', snapshot => {
-        const value = snapshot.val();
-        value.id = snapshot.key;
-        this.currentPlace = value;
-        console.log(this.currentPlace);
-      });
+    if (id) {
+      firebase
+        .database()
+        .ref(`locations/${id}`)
+        .on('value', snapshot => {
+          const value = snapshot.val();
+          value.id = snapshot.key;
+          this.currentPlace = value;
+        });
+    }
   };
 
   @action
@@ -133,7 +135,11 @@ export default class PlaceStore {
   };
 
   @action
-  mergeAndSavePlace: (place: Place) => void = place => {
+  mergeAndSavePlace: (
+    place: Place,
+    imageUri: string,
+    fileName: string
+  ) => void = (place, imageUri, fileName) => {
     if (place) {
       place.latitude = this.currentPlace ? this.currentPlace.latitude : 0;
       place.longitude = this.currentPlace ? this.currentPlace.longitude : 0;
@@ -149,8 +155,19 @@ export default class PlaceStore {
     this.currentPlace.price = 0;
     this.currentPlace.ratingCount = 0;
     this.currentPlace.reviews = [];
-
-    this.saveToFirebase();
+    this.currentPlace.addedAt = Date.now();
+    if (imageUri) {
+      firebase
+        .storage()
+        .ref(`images/${fileName}`)
+        .putFile(imageUri, { contentType: 'image/jpeg' })
+        .then(uploadedFile => {
+          this.currentPlace.imageUrl = uploadedFile.downloadUrl;
+          this.saveToFirebase();
+        });
+    } else {
+      this.saveToFirebase();
+    }
   };
 
   saveToFirebase: () => void = () => {

@@ -1,6 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import { Text, View, TextInput, StyleSheet } from 'react-native';
+import colors from './../../constants/colors';
 
 type Props = {
   initialValue: string
@@ -23,9 +24,11 @@ export default class InputWithLabel extends Component {
   render() {
     return (
       <View style={[styles.container, this.props.style]}>
-        <Text style={{ flex: 1, alignSelf: 'center' }}>{this.props.label}</Text>
+        <Text style={{ flex: 1, alignSelf: 'center', color: colors.pureBlack }}>
+          {this.props.label}
+        </Text>
         <TextInput
-          style={{ flex: 4 }}
+          style={{ flex: 4, color: colors.pureBlack }}
           value={this.state.value}
           onChangeText={text => this.onChangeText(text)}
         />

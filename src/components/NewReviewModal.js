@@ -59,14 +59,16 @@ export default class NewReviewModal extends Component {
                   <Text
                     style={{
                       fontSize: 20,
-                      color: colors.aquaBlack,
+                      color: colors.pureBlack,
                       alignContent: 'center',
                       alignSelf: 'center'
                     }}
                   >
                     Add new review
                   </Text>
-                  <Text>Rating: {this.state.rating}</Text>
+                  <Text style={{ color: colors.pureBlack }}>
+                    Rating: {this.state.rating}
+                  </Text>
                   <Slider
                     style={{ padding: 4 }}
                     minimumValue={1}
@@ -75,7 +77,7 @@ export default class NewReviewModal extends Component {
                     value={this.state.rating}
                     onValueChange={rating => this.setState({ rating })}
                   />
-                  <Text>Description:</Text>
+                  <Text style={{ color: colors.pureBlack }}>Description:</Text>
                   <TextInput
                     value={this.state.description}
                     onChangeText={description => this.setState({ description })}
@@ -88,7 +90,9 @@ export default class NewReviewModal extends Component {
                         description: this.state.description
                       })}
                   >
-                    <Text style={{ fontSize: 24 }}>Submit</Text>
+                    <Text style={{ fontSize: 24, color: colors.pureBlack }}>
+                      Submit
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </TouchableWithoutFeedback>

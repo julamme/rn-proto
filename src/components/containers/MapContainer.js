@@ -259,9 +259,9 @@ export default class MapContainer extends Component<Props, State> {
         <MapView.Marker
           key={item.id}
           identifier={item.id}
-          title={item.name}
+          title={item.value.name}
           onPress={event => {
-            this.mapRef.animateToCoordinate(event.nativeEvent.coordinate, 1);
+            //this.mapRef.animateToCoordinate(event.nativeEvent.coordinate, 1);
             this.setState({
               currentSelection: event.nativeEvent.id,
               showAddNewLocation: false,

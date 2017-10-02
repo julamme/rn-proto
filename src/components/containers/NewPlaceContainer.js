@@ -217,7 +217,7 @@ export default class NewPlaceContainer extends Component<Props, State> {
             }}
             onPress={this.addPhoto}
           >
-            <Text style={{ colors: colors.pureBlack }}>Add photo</Text>
+            <Text style={{ color: colors.pureBlack }}>Add photo</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -228,7 +228,7 @@ export default class NewPlaceContainer extends Component<Props, State> {
             }}
             onPress={this.save}
           >
-            <Text style={{ colors: colors.pureBlack }}>Send</Text>
+            <Text style={{ color: colors.pureBlack }}>Send</Text>
           </TouchableOpacity>
         </View>
 

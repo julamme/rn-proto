@@ -1,10 +1,8 @@
 import LoginStore from './LoginStore';
-import NavigationStore from './NavigationStore';
 import PlaceStore from './PlaceStore';
 
 export type RootStoreType = {
   loginStore: LoginStore,
-  navStore: NavigationStore,
   placeStore: PlaceStore
 };
 class RootStore {

@@ -34,7 +34,6 @@ export default class NewReviewModal extends Component {
         >
           <TouchableWithoutFeedback
             onPress={() => {
-              console.log('touched');
               this.props.rootStore.placeStore.cancelReview();
             }}
           >

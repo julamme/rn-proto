@@ -21,7 +21,7 @@ export default class LoginContainer extends Component<Props, State> {
   }
   componentDidUpdate() {
     if (this.props.rootStore.loginStore.firebaseUser) {
-      //this.props.navigation.navigate('Main');
+      this.props.navigation.navigate('Main');
     }
   }
 
@@ -73,7 +73,7 @@ export default class LoginContainer extends Component<Props, State> {
     );
   }
   render() {
-    if (this.props.rootStore.loginStore.firebaseUser === 'debug') {
+    if (this.props.rootStore.loginStore.firebaseUser) {
       return <View />;
     } else {
       return (
